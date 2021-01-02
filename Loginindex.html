@@ -80,15 +80,29 @@ color:#ffc107;
 <div class="loginbox">
 <img src="employee.jpg" class="pics">
 <h1> Login Here</h1>
-<form name="formn" onsubmit="" action="Register.html" method="post">
+<form name="sform" onsubmit="return validation()" action="https://gk1925.github.io/Login-and-Register/Register.html" method="post">
  <p>Username</p>
-<input type="text" name="" placeholder="Enter Username" required>
+<input type="text" name="" placeholder="Enter Username" >
  <p>Password</p>
-<input type="Password" name="" placeholder="Enter Password" required>
- <input type="submit" name="" value="Login"><br>
+<input type="Password" name="uid" placeholder="Enter Password">
+ <input type="submit" name="pswd" value="Login"><br>
  
 </form>
 </div>
+ <script>
+function validateform() {
+		var k = document.forms["sform"]["uid"].value;
+		var p = document.forms["sform"]["pswd"].value;
+		if (k == "") {
+			alert("User name must be filled out");
+			return false;
+		}
+		if (p == "") {
+			alert("Please Enter your Password");
+			return false;
+		}
+	}
+</script>
 </body>
 </head>
 </html>
